@@ -19,6 +19,7 @@ if __name__ == "__main__":
 	try:
 		operando1 = int(sys.argv[1])
 		operando2 = int(sys.argv[3])
+		
 
 	except ValueError:
 		sys.exit("Error: Non numerical parameters")
@@ -28,7 +29,10 @@ if __name__ == "__main__":
 	if sys.argv[2] == "multiplicacion":
 		result = calculadorahija.producto(operando1, operando2)
 	elif sys.argv[2] == "division":
-		result = calculadorahija.div(operando1, operando2)
+		if operando2 == 0:
+			result = "Division by zero is not allowed"
+		else:
+			result = calculadorahija.div(operando1, operando2)
 	elif sys.argv[2] == "suma":
 		result = calculadorahija.suma(operando1, operando2)
 	elif sys.argv[2] == "resta":

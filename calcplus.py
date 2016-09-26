@@ -3,7 +3,7 @@
 
 import sys
 
-fich = open('/home/raquel/ptavi-p2/operaciones', 'r')
+fich = open('operaciones', 'r')
 operaciones = fich.readlines()
 
 if __name__ == "__main__":	
